@@ -1,16 +1,34 @@
-# React + Vite
+# MERN EMR Appointment System — Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Frontend for a role-based EMR appointment scheduling system.
 
-Currently, two official plugins are available:
+- **Backend/API repo**: [EMR-Appointment-System---Backend](https://github.com/Annan-Andrews/EMR-Appointment-System---Backend)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Roles & features
+- **Super Admin**: manage doctors/receptionists, configure doctor schedules
+- **Receptionist**: view slots, book appointments, manage patients/appointments
+- **Doctor**: view only their own appointments
 
-## React Compiler
+## Tech stack
+React + Vite, Redux Toolkit, React Router, Axios, TailwindCSS
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Local setup
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 1) Install dependencies
+```bash
+npm install
+
+  2) Configure environment variables
+Create a .env file in the project root:
+
+VITE_API_URL=http://localhost:5000/api
+3) Run dev server
+npm run dev
+App runs on the Vite URL printed in the terminal (commonly http://localhost:5173).
+
+Authentication notes (important)
+Access token is stored client-side and sent as Authorization: Bearer <token>.
+Refresh token is httpOnly cookie set by the backend.
+Axios interceptor auto-calls POST /auth/refresh on 401 and retries the failed request.
