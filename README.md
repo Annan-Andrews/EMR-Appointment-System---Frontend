@@ -87,6 +87,23 @@ POST /auth/refresh
 when a `401` response occurs and retries the failed request.
 
 
+---
+
+# Demo Credentials
+
+⚠️ These credentials are provided for **demonstration and testing purposes only**.
+
+**Super Admin**  
+admin@emr.com / Admin@1234
+
+**Doctor**  
+aisha@emr.com / Doctor@1234
+
+**Receptionist**  
+priya@emr.com / Recept@1234
+
+---
+
 
 ## Login
 
