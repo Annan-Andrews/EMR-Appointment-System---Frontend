@@ -108,7 +108,7 @@ when a `401` response occurs and retries the failed request.
 
 ## Doctor Schedule Modal
 
-![Doctor Schedule](screenshots/04-doctor-schedule-modal.png)
+![Doctor Schedule](screenshots/Doctor-Schedule.png)
 
 ---
 
